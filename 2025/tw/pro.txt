@@ -1,0 +1,51 @@
+Amazon Time Games is designing a game in which the player must pass rounds sequentially. The rules of play are as follows:
+
+The player loses health to complete each round.
+The player's health must remain greater than 0 at all times.
+The player can choose to use armor in any one round. The armor will prevent damage equal to min(armor, power[i]), where i is the current round.
+Determine the minimum starting health required for a player to win the game.
+
+Example:
+power = [1, 2, 6, 7], armor = 5.
+
+To win the game, the player should start with at least 12 units of health. One of the optimal strategies is to use the armor in the third round, reducing the damage to 1 unit instead of 6. The player's health after each round is as follows:
+
+Round	Health
+Initial	12
+After round 1	12 - 1 = 11
+After round 2	11 - 2 = 9
+After round 3 (with armor)	9 - 1 (due to armor) = 8
+After round 4	8 - 7 = 1
+No lower starting health will allow the player to win.
+
+Function Description:
+Complete the function getMinimumValue in the editor below. The function should return the minimum amount of health required at the beginning of the game.
+
+Parameters:
+
+int power[n]: The health cost for each round.
+int armor: The maximum amount of health that can be restored in a single round using armor.
+Constraints:
+
+1 <= n <= 10^5
+1 <= armor <= 10
+1 <= power[i] <= 10
+Input Format (For Custom Testing):
+Sample Input:
+
+makefile
+Copy code
+n = 3
+power = [1, 2, 3]
+armor = 1
+Output:
+Copy code
+6
+Explanation: In this case, using the armor in the first round will reduce the damage from 1 to 0. The health of the player after each round will be:
+
+Initial: 6
+After the first round with armor: 6 - 1 + 1 (armor) = 6
+After the second round: 6 - 2 = 4
+After the third round: 4 - 3 = 1
+No lower starting health will allow the player to win.
+

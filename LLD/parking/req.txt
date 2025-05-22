@@ -1,0 +1,28 @@
+Parking System Design
+
+    Multiple Floors with parking spots.
+
+    Vehicle Types & Spot Requirements:
+    Car → 1 spot
+    Limo → 2 spots
+    Truck → 3 spots
+
+    Payment: Charged based on hours parked.
+
+High-Level Design
+
+    Parking System
+
+        Attributes: Parking Garage, Hourly Rate
+        Manages parking and billing.
+
+    Parking Garage
+
+        Contains multiple floors.
+        Handles vehicle parking and removal.
+
+    Parking Floor
+
+        Attributes: #floors, #spots
+        Methods: park(), free()
+        Manages individual parking spots.

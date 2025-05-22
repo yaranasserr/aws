@@ -1,0 +1,51 @@
+Data scientists are working on a utility for genome sequencing algorithms. The utility finds anagram patterns in a pair of DNA sequence strings.
+ A pair of DNA is special if they are anagrams after removing any number of occurrences of at most one character from each DNA sequence.
+
+
+Given n pairs of DNA, for each pair, attempt to make them anagrams. Return a list of boolean values, one for each pair, where True means a pair is special.
+
+
+Given n = 1, pair and strings dna1 = "safddadsf" and dna2 = "famafmss"
+
+
+The strings are anagrams after removing all the occurrences of character 'd' from s and character 'm' from t. Return [True].
+
+
+Note: It is not required that all instances of a character be removed. For example, given 'aab' and 'ba', one 'a' can be removed from 'aab' to leave 'ab'.
+
+
+Sample Case 0
+Input:
+2
+abcee acdeedb
+sljffsaje sljsje
+
+
+Output:
+1
+0
+
+
+Explanation:
+
+
+For pair 1:
+Remove 'd' from the second string and leave the first string untouched.
+For pair 2:
+dna1 contains 'f' and 'a' which are not in dna2. They cannot be anagrams after removing only 1 character from dna1.
+
+
+Sample Case 1
+Input
+1
+abcdee abcde
+
+
+Output
+1
+
+
+Explanation:
+
+
+Remove one occurrence of 'e' from dna1.
